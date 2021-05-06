@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 def print_sorted_dictionary(my_dict):
     keys = []
     if my_dict:
@@ -9,5 +8,3 @@ def print_sorted_dictionary(my_dict):
         keys.sort()
         for k in keys:
             print("{}: {}".format(k, my_dict[k]))
-
-
