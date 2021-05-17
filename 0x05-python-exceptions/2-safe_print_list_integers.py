@@ -2,18 +2,14 @@
 
 
 def safe_print_list_integers(my_list=[], x=0):
-    counter = 0
-
-    for idx, num in enumerate(my_list):
+    count = 0
+    for idx in range(0, x):
         try:
-            if x > idx:
-                print("{:d}".format(num), end='')
-                counter += 1
-        except IndexError:
-            return counter
+            print("{:d}".format(my_list[idx]), end='')
+            count += 1
         except (ValueError, TypeError):
-            continue
-    
-    print()
-    return counter
+            pass
 
+    print()
+    return count
+    
