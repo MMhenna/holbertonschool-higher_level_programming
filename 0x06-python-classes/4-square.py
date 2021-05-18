@@ -31,7 +31,7 @@ class Square:
     def size(self, value):
         """size attribute setter
         Args:
-            size (int): size of square
+            value (int): new size of square
         Exception raises:
             TypeError: if size is not an int
             ValueError: size is less than 0
