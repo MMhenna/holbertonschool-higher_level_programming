@@ -12,9 +12,6 @@ class Square:
         """Initialization of instance attributes.
             Args:
                 size (int): Zero or positve number.
-            Raises:
-                TypeError : size not int
-                ValueError : size < 0
         """
         if type(size) is not int:
             raise TypeError("size must be an integer")
