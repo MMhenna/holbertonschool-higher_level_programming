@@ -14,7 +14,7 @@ class Square:
 
         Args:
             size (int): Zero or positve number.
-        Raises:
+        Exception raises:
             TypeError: If size not int.
             ValueError: If size < 0.
         """
