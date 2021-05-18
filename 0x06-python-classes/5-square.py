@@ -1,49 +1,40 @@
 #!/usr/bin/python3
+""" This module is used as intro to classes """
 
 
-class Square:    
-
-    """Defining a Square"""
-
-    def __init__(self, size):
-        '''Initialization of instance attributes
-            Args: 
-            size (int): Zero or positve number.
-        '''
-        if type(size) is not int:
+class Square:
+    """ square class with size(>=0 integer) attribute """
+    def __init__(self, size=0):
+        if type(size) is int:
+            if size >= 0:
+                self.__size = size
+            else:
+                raise ValueError("size must be >= 0")
+        else:
             raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        else
-            self.__size = size
 
     @property
     def size(self):
-        """returns the size of the length of the square"""
+        """ size attibute getter """
         return self.__size
 
     @size.setter
     def size(self, value):
-        '''sets the size value
-            Args:
-            value (int): Zero or positve number.
-        '''
-        if type(value) is not int:
+        """ size attribute setter """
+        if type(value) is int:
+            if value >= 0:
+                self.__size = value
+            else:
+                raise ValueError("size must be >= 0")
+        else:
             raise TypeError("size must be an integer")
-        elif value < 0:
-            raise ValueError("size must be >= 0")
-        else
-            self.__size = value
 
     def area(self):
-        '''Calculates the area
-            Return: 
-            The current square area.
-        '''
-        return self.__size * self.__size
+        """ calculate and return the area of the square """
+        return self.__size ** 2
 
     def my_print(self):
-         """Prints the a square in # the size of the square"""
+         """ Prints the a square in # the size of the square """
         if self.__size == 0:
             print()
         else:
