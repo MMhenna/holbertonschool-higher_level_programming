@@ -5,5 +5,5 @@
 
 
 class Square:
-    """Creates an object of a Square Class """
+    """Creates an object of a Square Class"""
     pass
