@@ -3,7 +3,7 @@
 
 class Square:
     """Defining a Square"""
-    def __init__(self, size):
+    def __init__(self, size=None):
         """ Initialization of instance attributes
             Args:
             size (int): Zero or positve number.
