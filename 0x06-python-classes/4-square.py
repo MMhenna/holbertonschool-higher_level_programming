@@ -5,12 +5,13 @@
 class Square:
     """ square class with size(>=0 integer) attribute """
     def __init__(self, size=0):
-        if type(size) is not int:
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
+        if type(size) is int:
+            if size >= 0:
+                self.__size = size
+            else:
+                raise ValueError("size must be >= 0")
         else:
-            self.__size = size
+            raise TypeError("size must be an integer")
 
     @property
     def size(self):
@@ -20,13 +21,14 @@ class Square:
     @size.setter
     def size(self, value):
         """ size attribute setter """
-        if type(value) is not int:
+        if type(value) is int:
+            if value >= 0:
+                self.__size = value
+            else:
+                raise ValueError("size must be >= 0")
+        else:
             raise TypeError("size must be an integer")
-        elif value < 0:
-            raise ValueError("size must be >= 0")
-        else
-            self.__size = value
 
     def area(self):
         """ calculate and return the area of the square """
-        return self.__size * self.__size
+            return self.__size ** 2
