@@ -1,6 +1,6 @@
 #!/usr/bin/python3
+""" Module Square """
 
-"""1-square.py: class Square"""
 
 class Square:
     """Represents a square with Private instance attribute size.

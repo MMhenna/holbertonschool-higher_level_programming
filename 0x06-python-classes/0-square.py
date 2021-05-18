@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-
-
-"""0-square.py: Creates a Class Square"""
+""" Module Square """
 
 
 class Square:
