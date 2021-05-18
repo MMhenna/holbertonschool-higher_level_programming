@@ -1,15 +1,8 @@
 #!/usr/bin/python3
-""" Module Square """
+""" This module is used as intro to classes """
 
 
 class Square:
-    """Represents a square with Private instance attribute size.
-        Attribute:
-            size (int): size of suare
-    """
+    """ this is an empty class """
     def __init__(self, size):
-        """Initialization of instance attributes
-            Args:
-                size (int): The size of the square
-        """
         self.__size = size
