@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
+
 """6-rectangle.py: Rectangle Class"""
+
 
 class Rectangle:
     """Class Rectangle"""
