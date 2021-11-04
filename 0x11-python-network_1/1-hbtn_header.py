@@ -1,13 +1,14 @@
 #!/usr/bin/python3
+"""Displays the X-Request-Id header variable of a request to a given URL.
+Usage: ./1-hbtn_header.py <URL>
+"""
 import sys
-from urllib.request import Request, urlopen
+import urllib.request
+
 
 if __name__ == "__main__":
     url = sys.argv[1]
-    req = Request(url)
-    with urlopen(req) as response:
-        headers = response.getheaders()
 
-    for data in headers:
-        if data[0] == "X-Request-Id":
-            print(data[1])
+    request = urllib.request.Request(url)
+    with urllib.request.urlopen(request) as response:
+        print(dict(response.headers).get("X-Request-Id"))
